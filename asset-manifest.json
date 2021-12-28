@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/SudhanshuAgrawal27.github.io/static/js/main.2d399ffd.js",
-    "index.html": "/SudhanshuAgrawal27.github.io/index.html",
-    "main.2d399ffd.js.map": "/SudhanshuAgrawal27.github.io/static/js/main.2d399ffd.js.map"
+    "main.js": "/static/js/main.2d399ffd.js",
+    "index.html": "/index.html",
+    "main.2d399ffd.js.map": "/static/js/main.2d399ffd.js.map"
   },
   "entrypoints": [
     "static/js/main.2d399ffd.js"
