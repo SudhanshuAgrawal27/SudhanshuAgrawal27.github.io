@@ -1,12 +1,10 @@
 {
   "files": {
-    "main.css": "/SudhanshuAgrawal27.github.io/static/css/main.31d6cfe0.css",
     "main.js": "/SudhanshuAgrawal27.github.io/static/js/main.2d399ffd.js",
     "index.html": "/SudhanshuAgrawal27.github.io/index.html",
     "main.2d399ffd.js.map": "/SudhanshuAgrawal27.github.io/static/js/main.2d399ffd.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
     "static/js/main.2d399ffd.js"
   ]
 }
