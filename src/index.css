@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(10,25,81,1) 90%); 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html,body{
+    height:100%;
+    margin: 0; 
+}
+
+.main-title 
+{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+}
+.main-title h1
+{
+    font-size: 128px; 
+    color: white; 
+    text-align: center;
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .05em; 
+    animation: 
+        typing 3.0s steps(30, end), 
+        blink-caret 1.0s step-end infinite; 
+}
+
+@keyframes typing 
+{
+    from { width: 0 }
+    to { width: 100% }
+}
