@@ -37,3 +37,33 @@ html,body{
     from { width: 0 }
     to { width: 100% }
 }
+
+
+.main-navbar
+{
+    margin: auto;
+    margin-top: 10%; 
+    width: 75%;
+    height: 20%;  
+    display: flex;  
+    align-items: center; 
+    justify-content: center;
+    background: none;
+}
+
+.main-navbar-tile
+{
+    display: block;
+    width: 30%; 
+    margin-left: 10%; 
+    margin-right: 10%; 
+    border-radius: 10%;
+    background-color: white;
+    box-shadow: 5px 5px 2px grey ;
+}
+
+.main-navbar-logo
+{
+    width: 100%; 
+    display: block; 
+}
