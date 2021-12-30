@@ -35,7 +35,7 @@ class NavBar extends React.Component
       {
         this.setState({visible:true})
       }.bind(this), 
-      2500)
+      2300)
   }
 
   render()
@@ -44,7 +44,7 @@ class NavBar extends React.Component
     if (this.state.visible == true)
     {
       return(
-        <FadeIn>
+        <FadeIn transitionDuration={1500}>
         <div className='main-navbar'>
           <div className="main-navbar-tile" > 
             <a className="main-navbar-logo" href="https://github.com/SudhanshuAgrawal27"> 
