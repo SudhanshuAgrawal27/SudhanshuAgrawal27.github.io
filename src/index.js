@@ -35,7 +35,7 @@ class NavBar extends React.Component
       {
         this.setState({visible:true})
       }.bind(this), 
-      2300)
+      2100)
   }
 
   render()

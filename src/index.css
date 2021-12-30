@@ -28,7 +28,7 @@ html,body{
     margin: 0 auto; 
     letter-spacing: .05em; 
     animation: 
-        typing 3.0s steps(30, end), 
+        typing 2.5s steps(30, end), 
         blink-caret 1.0s step-end infinite; 
 }
 
@@ -54,12 +54,12 @@ html,body{
 .main-navbar-tile
 {
     display: block;
-    width: 30%; 
-    margin-left: 10%; 
-    margin-right: 10%; 
+    width: 8vw; 
+    margin-left: 8%; 
+    margin-right: 8%; 
     border-radius: 10%;
     background-color: white;
-    box-shadow: 0.3vw 0.3vw 0.2vw grey ;
+    box-shadow: 0.2vw 0.2vw 0.1vw grey ;
 }
 
 .main-navbar-logo
