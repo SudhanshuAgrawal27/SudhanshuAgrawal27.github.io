@@ -20,7 +20,7 @@ html,body{
 }
 .main-title h1
 {
-    font-size: 128px; 
+    font-size: 8vw; 
     color: white; 
     text-align: center;
     overflow: hidden; 
@@ -59,11 +59,16 @@ html,body{
     margin-right: 10%; 
     border-radius: 10%;
     background-color: white;
-    box-shadow: 5px 5px 2px grey ;
+    box-shadow: 0.3vw 0.3vw 0.2vw grey ;
 }
 
 .main-navbar-logo
 {
     width: 100%; 
     display: block; 
+}
+
+.main-navbar-logo img
+{
+    display: flex; 
 }
