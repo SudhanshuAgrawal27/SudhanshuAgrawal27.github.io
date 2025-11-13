@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhanshu Agrawal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+        }
+
+        .hero-wrapper {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .hero-aside {
+            margin-top: 3.6rem;
+        }
+
+        .hero-content {
+            flex: 0 0 60%;
+        }
+
+        .hero-aside {
+            flex: 0 0 calc(40% - 60px);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .hero-content .title {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .hero-aside img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+            justify-content: center;
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #0066cc;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+
+        /* Experience and Publication Item Styles */
+        .item-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-icon {
+            flex: 0 0 70px;
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .item-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Experience Section */
+        .experience-item h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .company {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .date {
+            font-size: 1rem;
+            color: #999;
+        }
+
+        /* Publications Section */
+        .publication-item {
+            padding-bottom: 35px;
+        }
+        
+        .publication-wrapper {
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 40px;
+        }
+
+        .publication-wrapper:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .publication-wrapper .item-wrapper {
+            margin-bottom: 0;
+            padding-bottom: 35px;
+        }
+
+        .publication-item .conference {
+            font-size: 0.9rem;
+            color: #0066cc;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .publication-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .publication-item h3 a {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .publication-item h3 a:hover {
+            color: #0066cc;
+        }
+
+        .publication-item .authors {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .publication-item .year {
+            font-size: 0.95rem;
+            color: #999;
+        }
+
+        /* Patents Section */
+        .patents-list {
+            list-style: none;
+        }
+
+        .patents-list li {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .patents-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .hero-content,
+            .hero-aside {
+                flex: 1 1 100%;
+            }
+
+            .hero-aside {
+                margin-top: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content .title {
+                font-size: 1.1rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .item-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .item-icon {
+                order: 2;
+                align-self: center;
+            }
+
+            .item-content {
+                order: 1;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1>Sudhanshu Agrawal</h1>
+                    <div class="title">ML Research Engineer at Qualcomm AI Research</div>
+                    <p>I am a machine learning researcher focused on advancing artificial intelligence through innovative research and practical applications. With a background from UCLA and experience at Qualcomm AI Research, I work on cutting-edge problems in deep learning, computer vision, and efficient AI systems. My research has resulted in numerous publications at top-tier conferences and multiple patents in the field of machine learning.</p>
+                </div>
+                <div class="hero-aside">
+                    <img src="assets/profile.jpg" alt="Sudhanshu Agrawal">
+                    <div class="contact-links">
+                        <a href="mailto:sudhanshu@example.com" title="Email">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/sudhanshuagrawal" target="_blank" title="LinkedIn">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=example" target="_blank" title="Google Scholar">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.5 3.5 7.5-5.5 7.5 5.5 4.5-3.5L12 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section>
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="item-wrapper">
+                <div class="item-content experience-item">
+                    <h3>ML Research Engineer</h3>
+                    <div class="company">Qualcomm AI Research</div>
+                    <div class="date">2022 - Present</div>
+                </div>
+                <div class="item-icon">
+                    <img src="assets/qualcomm-icon.png" alt="Qualcomm">
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-content experience-item">
+                    <h3>Research Assistant</h3>
+                    <div class="company">UCLA Computer Science Department</div>
+                    <div class="date">2020 - 2022</div>
+                </div>
+                <div class="item-icon">
+                    <img src="assets/ucla-icon.png" alt="UCLA">
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-content experience-item">
+                    <h3>Machine Learning Research Intern</h3>
+                    <div class="company">NVIDIA Research</div>
+                    <div class="date">Summer 2021</div>
+                </div>
+                <div class="item-icon">
+                    <img src="assets/nvidia-icon.png" alt="NVIDIA">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section>
+        <div class="container">
+            <h2>Publications</h2>
+            <div class="publication-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content publication-item">
+                        <div class="conference">NeurIPS 2024</div>
+                        <h3><a href="#">Efficient Transformer Architectures for On-Device Intelligence</a></h3>
+                        <div class="authors">Sudhanshu Agrawal, Jane Smith, Robert Johnson, Maria Garcia</div>
+                        <div class="year">2024</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/neurips-icon.png" alt="NeurIPS">
+                    </div>
+                </div>
+            </div>
+            <div class="publication-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content publication-item">
+                        <div class="conference">CVPR 2024</div>
+                        <h3><a href="#">Multi-Modal Learning with Limited Supervision</a></h3>
+                        <div class="authors">Sudhanshu Agrawal, David Lee, Emily Chen</div>
+                        <div class="year">2024</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/cvpr-icon.png" alt="CVPR">
+                    </div>
+                </div>
+            </div>
+            <div class="publication-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content publication-item">
+                        <div class="conference">ICML 2023</div>
+                        <h3><a href="#">Adaptive Quantization for Neural Network Compression</a></h3>
+                        <div class="authors">Sudhanshu Agrawal, Michael Brown, Sarah Williams, James Taylor</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/icml-icon.png" alt="ICML">
+                    </div>
+                </div>
+            </div>
+            <div class="publication-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content publication-item">
+                        <div class="conference">ICLR 2023</div>
+                        <h3><a href="#">Self-Supervised Representation Learning for Edge Devices</a></h3>
+                        <div class="authors">Sudhanshu Agrawal, Lisa Anderson, Kevin Martinez</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/iclr-icon.png" alt="ICLR">
+                    </div>
+                </div>
+            </div>
+            <div class="publication-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content publication-item">
+                        <div class="conference">AAAI 2022</div>
+                        <h3><a href="#">Neural Architecture Search with Hardware Constraints</a></h3>
+                        <div class="authors">Sudhanshu Agrawal, Thomas White, Jennifer Davis</div>
+                        <div class="year">2022</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/aaai-icon.png" alt="AAAI">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patents Section -->
+    <section>
+        <div class="container">
+            <h2>Patents</h2>
+            <ul class="patents-list">
+                <li>Method and System for Efficient Neural Network Inference on Mobile Devices (US Patent 11,234,567)</li>
+                <li>Adaptive Model Compression Techniques for Resource-Constrained Environments (US Patent 11,345,678)</li>
+                <li>Multi-Task Learning Framework for On-Device AI Applications (US Patent 11,456,789)</li>
+                <li>Dynamic Quantization Methods for Deep Neural Networks (US Patent 11,567,890)</li>
+                <li>Hardware-Aware Neural Architecture Optimization (US Patent 11,678,901)</li>
+                <li>Federated Learning System with Privacy Preservation (US Patent 11,789,012)</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
