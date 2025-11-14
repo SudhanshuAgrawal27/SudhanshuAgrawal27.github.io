@@ -19,14 +19,14 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 960px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         /* Hero Section */
         .hero {
-            padding: 60px 0;
+            padding: 60px 0 40px 0;
         }
 
         .hero-wrapper {
@@ -37,15 +37,17 @@
         }
 
         .hero-aside {
-            margin-top: 3.6rem;
+            margin-top: 4.3rem;
         }
-
         .hero-content {
             flex: 0 0 60%;
         }
 
         .hero-aside {
             flex: 0 0 calc(40% - 60px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
         .hero-content h1 {
@@ -69,6 +71,7 @@
 
         .hero-aside img {
             width: 100%;
+            max-width: 225px;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -76,8 +79,9 @@
 
         .contact-links {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             margin-top: 25px;
+            width: 225px;
             justify-content: center;
         }
 
@@ -96,13 +100,13 @@
         }
 
         .icon {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
         }
 
         /* Section Styles */
         section {
-            padding: 80px 0;
+            padding: 60px 0 40px 0;
             border-top: 1px solid #e0e0e0;
         }
 
@@ -126,11 +130,11 @@
         }
 
         .item-icon {
-            flex: 0 0 70px;
-            width: 70px;
-            height: 70px;
-            border-radius: 8px;
-            background-color: #f5f5f5;
+            flex: 0 0 140px;
+            width: 140px;
+            height: 80px;
+            border-radius: 12px;
+            background-color: #fafafa;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -140,7 +144,8 @@
         .item-icon img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            padding: 8px;
         }
 
         /* Experience Section */
@@ -152,14 +157,21 @@
         }
 
         .experience-item .company {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #666;
             margin-bottom: 5px;
         }
 
         .experience-item .date {
-            font-size: 1rem;
+            font-size: 1.15rem;
             color: #999;
+        }
+        
+        .experience-item .honor {
+            font-size: 1.15rem;
+            color: #0066cc;
+            font-style: italic;
+            margin-top: 5px;
         }
 
         /* Publications Section */
@@ -183,10 +195,9 @@
         }
 
         .publication-item .conference {
-            font-size: 0.9rem;
+            font-size: 1.15rem;
             color: #0066cc;
             font-weight: 600;
-            text-transform: uppercase;
             margin-bottom: 8px;
         }
 
@@ -200,32 +211,44 @@
 
         .publication-item h3 a {
             color: #1a1a1a;
-            text-decoration: none;
+            text-decoration: underline;
             transition: color 0.3s;
         }
 
         .publication-item h3 a:hover {
             color: #0066cc;
+            text-decoration: underline;
         }
 
         .publication-item .authors {
-            font-size: 1rem;
+            font-size: 1.15rem;
             color: #666;
             margin-bottom: 5px;
         }
+        
+        .publication-item .authors .author-name {
+            font-weight: 600;
+            color: #333;
+        }
 
         .publication-item .year {
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             color: #999;
         }
 
         /* Patents Section */
+        .patents-intro {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
         .patents-list {
             list-style: none;
         }
 
         .patents-list li {
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             color: #555;
             margin-bottom: 15px;
             padding-left: 20px;
@@ -238,6 +261,53 @@
             left: 0;
             color: #0066cc;
             font-weight: bold;
+        }
+        .lead-inventor {
+            color: #0066cc;
+            font-size: 1.15rem;
+            font-style: italic;
+            margin-left: 12px;
+        }
+
+
+        /* Talks Section */
+        .talks-list {
+            list-style: none;
+        }
+
+        .talks-list li {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .talks-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .role {
+            color: #0066cc;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid #e0e0e0;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #999;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin: 0;
         }
 
         /* Responsive Design */
@@ -254,6 +324,7 @@
 
             .hero-aside {
                 margin-top: 0;
+                align-items: center;
             }
 
             .hero-content h1 {
@@ -288,7 +359,7 @@
             }
 
             section {
-                padding: 60px 0;
+                padding: 50px 0 30px 0;
             }
         }
     </style>
@@ -301,19 +372,23 @@
                 <div class="hero-content">
                     <h1>Sudhanshu Agrawal</h1>
                     <div class="title">ML Research Engineer at Qualcomm AI Research</div>
-                    <p>I am a machine learning researcher focused on advancing artificial intelligence through innovative research and practical applications. With a background from UCLA and experience at Qualcomm AI Research, I work on cutting-edge problems in deep learning, computer vision, and efficient AI systems. My research has resulted in numerous publications at top-tier conferences and multiple patents in the field of machine learning.</p>
+                    <p> Hi everyone! My name is Sudhanshu and I'm an ML Research Engineer at Qualcomm AI. I work on LLM efficiency research supervised by Mingu Lee. Our focus is inventing new speculative decoding algorithms for edge applications - making LLMs fast enough to run locally on your phone or laptop! I graduated from UCLA with a double major in Computer Science and Mathematics. I was fortunate to do research with Professor Aditya Grover on generative modeling and with Professor Levon Nurbekyan on mean-field games. I'm always interested in talking about LLM efficiency, generative modeling, and foundation models. Feel free to reach out if you'd like to chat!</p>
                 </div>
                 <div class="hero-aside">
-                    <img src="assets/profile.jpg" alt="Sudhanshu Agrawal">
+                    <img src="assets/profile.jpeg" alt="Sudhanshu Agrawal">
                     <div class="contact-links">
-                        <a href="mailto:sudhanshu@example.com" title="Email">
+                        <a href="mailto:sudhanshuagr27@g.ucla.edu" title="Email">
                             <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         </a>
-                        <a href="https://linkedin.com/in/sudhanshuagrawal" target="_blank" title="LinkedIn">
+                        <a href="https://linkedin.com/in/sudhanshu-agrawal" target="_blank" title="LinkedIn">
                             <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=example" target="_blank" title="Google Scholar">
+                        <a href="https://scholar.google.com/citations?user=C1cWfHkAAAAJ&hl=en" target="_blank" title="Google Scholar">
                             <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.5 3.5 7.5-5.5 7.5 5.5 4.5-3.5L12 0z"/></svg>
+                        </a>
+                        <a href="assets/Sudhanshu_Agrawal_Resume_1page.pdf" target="_blank" title="Resume/CV">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm2-8h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -329,30 +404,90 @@
                 <div class="item-content experience-item">
                     <h3>ML Research Engineer</h3>
                     <div class="company">Qualcomm AI Research</div>
-                    <div class="date">2022 - Present</div>
+                    <div class="date">2023 - Present</div>
                 </div>
                 <div class="item-icon">
-                    <img src="assets/qualcomm-icon.png" alt="Qualcomm">
+                    <img src="assets/qualcomm.png" alt="Qualcomm">
                 </div>
             </div>
             <div class="item-wrapper">
                 <div class="item-content experience-item">
-                    <h3>Research Assistant</h3>
-                    <div class="company">UCLA Computer Science Department</div>
-                    <div class="date">2020 - 2022</div>
+                    <h3>ML Engineering Intern</h3>
+                    <div class="company">Qualcomm AI Research</div>
+                    <div class="date">Summer 2022</div>
                 </div>
                 <div class="item-icon">
-                    <img src="assets/ucla-icon.png" alt="UCLA">
+                    <img src="assets/qualcomm.png" alt="Qualcomm">
                 </div>
             </div>
             <div class="item-wrapper">
                 <div class="item-content experience-item">
-                    <h3>Machine Learning Research Intern</h3>
-                    <div class="company">NVIDIA Research</div>
+                    <h3>ML Engineering Intern</h3>
+                    <div class="company">SonicJobs</div>
                     <div class="date">Summer 2021</div>
                 </div>
                 <div class="item-icon">
-                    <img src="assets/nvidia-icon.png" alt="NVIDIA">
+                    <img src="assets/sonicjobs.jpg" alt="SonicJobs">
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-content experience-item">
+                    <h3>ML and Data Science Intern</h3>
+                    <div class="company">Reliance Jio</div>
+                    <div class="date">Summer 2020</div>
+                </div>
+                <div class="item-icon">
+                    <img src="assets/jio.png" alt="Reliance Jio">
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-content experience-item">
+                    <h3>Intern</h3>
+                    <div class="company">Julia Computing Inc</div>
+                    <div class="date">Summer 2019</div>
+                </div>
+                <div class="item-icon">
+                    <img src="assets/julia.jpg" alt="Julia Computing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+        <div class="container">
+            <h2>Education</h2>
+            <div class="item-wrapper">
+                <div class="item-content experience-item">
+                    <h3>Bachelor of Science, Computer Science</h3>
+                    <div class="company">University of California, Los Angeles (UCLA)</div>
+                    <div class="date">2019 - 2023</div>
+                    <div class="honor">Magna cum laude</div>
+                </div>
+                <div class="item-icon">
+                    <img src="assets/ucla-computer-science.png" alt="UCLA">
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-content experience-item">
+                    <h3>Bachelor of Science, Mathematics</h3>
+                    <div class="company">University of California, Los Angeles (UCLA)</div>
+                    <div class="date">2019 - 2023</div>
+                    <div class="honor">Cum laude</div>
+                </div>
+                <div class="item-icon">
+                    <img src="assets/ucla-mathematics.png" alt="UCLA">
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-content experience-item">
+                    <h3>ISC 12th Grade</h3>
+                    <div class="company">Mallya Aditi International School</div>
+                    <div class="date">2017 - 2019</div>
+                    <div class="honor">National Rank 4</div>
+                </div>
+                <div class="item-icon">
+                    <img src="assets/mais.png" alt="Mallya Aditi International School">
                 </div>
             </div>
         </div>
@@ -365,65 +500,65 @@
             <div class="publication-wrapper">
                 <div class="item-wrapper">
                     <div class="item-content publication-item">
-                        <div class="conference">NeurIPS 2024</div>
-                        <h3><a href="#">Efficient Transformer Architectures for On-Device Intelligence</a></h3>
-                        <div class="authors">Sudhanshu Agrawal, Jane Smith, Robert Johnson, Maria Garcia</div>
+                        <div class="conference">arXiv Preprint</div>
+                        <h3><a href="https://arxiv.org/abs/2509.18085">Spiffy: Multiplying Diffusion LLM Acceleration via Lossless Speculative Decoding</a></h3>
+                        <div class="authors"><span class="author-name">Sudhanshu Agrawal</span>, Risheek Garrepalli, Raghavv Goel, Mingu Lee, Christopher Lott, Fatih Porikli</div>
+                        <div class="year">2025</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/arxiv.jpg" alt="ArXiv">
+                    </div>
+                </div>
+            </div>
+            <div class="publication-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content publication-item">
+                        <div class="conference">ICML ES-FoMo Workshop, 2025</div>
+                        <h3><a href="https://arxiv.org/abs/2506.22694">VOCABTRIM: Vocabulary Pruning for Efficient Speculative Decoding in LLMs</a></h3>
+                        <div class="authors">Raghavv Goel, <span class="author-name">Sudhanshu Agrawal</span>, et al. </div>
+                        <div class="year">2025</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/icml.png" alt="ICML">
+                    </div>
+                </div>
+            </div>
+            <div class="publication-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content publication-item">
+                        <div class="conference">NeurIPS ENLSP-IV Workshop, 2024</div>
+                        <h3><a href="https://arxiv.org/abs/2410.18351">AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability</a></h3>
+                        <div class="authors"><span class="author-name">Sudhanshu Agrawal</span>, Wonseok Jeon, Mingu Lee </div>
                         <div class="year">2024</div>
                     </div>
                     <div class="item-icon">
-                        <img src="assets/neurips-icon.png" alt="NeurIPS">
+                        <img src="assets/neurips.png" alt="NeurIPS">
                     </div>
                 </div>
             </div>
             <div class="publication-wrapper">
                 <div class="item-wrapper">
                     <div class="item-content publication-item">
-                        <div class="conference">CVPR 2024</div>
-                        <h3><a href="#">Multi-Modal Learning with Limited Supervision</a></h3>
-                        <div class="authors">Sudhanshu Agrawal, David Lee, Emily Chen</div>
-                        <div class="year">2024</div>
-                    </div>
-                    <div class="item-icon">
-                        <img src="assets/cvpr-icon.png" alt="CVPR">
-                    </div>
-                </div>
-            </div>
-            <div class="publication-wrapper">
-                <div class="item-wrapper">
-                    <div class="item-content publication-item">
-                        <div class="conference">ICML 2023</div>
-                        <h3><a href="#">Adaptive Quantization for Neural Network Compression</a></h3>
-                        <div class="authors">Sudhanshu Agrawal, Michael Brown, Sarah Williams, James Taylor</div>
+                        <div class="conference">NeurIPS, 2023</div>
+                        <h3><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/8fab4407e1fe9006b39180525c0d323c-Abstract-Conference.html">ExPT: Synthetic Pretraining for Few-Shot Experimental Design</a></h3>
+                        <div class="authors"> Tung Nguyen, <span class="author-name">Sudhanshu Agrawal</span>, Aditya Grover</div>
                         <div class="year">2023</div>
                     </div>
                     <div class="item-icon">
-                        <img src="assets/icml-icon.png" alt="ICML">
+                        <img src="assets/neurips.png" alt="NeurIPS">
                     </div>
                 </div>
             </div>
             <div class="publication-wrapper">
                 <div class="item-wrapper">
                     <div class="item-content publication-item">
-                        <div class="conference">ICLR 2023</div>
-                        <h3><a href="#">Self-Supervised Representation Learning for Edge Devices</a></h3>
-                        <div class="authors">Sudhanshu Agrawal, Lisa Anderson, Kevin Martinez</div>
-                        <div class="year">2023</div>
-                    </div>
-                    <div class="item-icon">
-                        <img src="assets/iclr-icon.png" alt="ICLR">
-                    </div>
-                </div>
-            </div>
-            <div class="publication-wrapper">
-                <div class="item-wrapper">
-                    <div class="item-content publication-item">
-                        <div class="conference">AAAI 2022</div>
-                        <h3><a href="#">Neural Architecture Search with Hardware Constraints</a></h3>
-                        <div class="authors">Sudhanshu Agrawal, Thomas White, Jennifer Davis</div>
+                        <div class="conference">Journal of Computational Physics, 2022</div>
+                        <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S002199912200198X">Random Features for High-Dimensional Nonlocal Mean-Field Games</a></h3>
+                        <div class="authors"> <span class="author-name">Sudhanshu Agrawal*</span>, Wonjun Lee*, Samy Wu Fung, Levon Nurbekyan</div>
                         <div class="year">2022</div>
                     </div>
                     <div class="item-icon">
-                        <img src="assets/aaai-icon.png" alt="AAAI">
+                        <img src="assets/elsevier.png" alt="JCP">
                     </div>
                 </div>
             </div>
@@ -434,15 +569,43 @@
     <section>
         <div class="container">
             <h2>Patents</h2>
+            <p class="patents-intro">The following patents were filed from 2024-2025 and are hence, not yet published. They relate to 6 distinct inventions with multiple US and global patent applications.</p>
             <ul class="patents-list">
-                <li>Method and System for Efficient Neural Network Inference on Mobile Devices (US Patent 11,234,567)</li>
-                <li>Adaptive Model Compression Techniques for Resource-Constrained Environments (US Patent 11,345,678)</li>
-                <li>Multi-Task Learning Framework for On-Device AI Applications (US Patent 11,456,789)</li>
-                <li>Dynamic Quantization Methods for Deep Neural Networks (US Patent 11,567,890)</li>
-                <li>Hardware-Aware Neural Architecture Optimization (US Patent 11,678,901)</li>
-                <li>Federated Learning System with Privacy Preservation (US Patent 11,789,012)</li>
+                <li>WO PCT/CN2025/124672</li>
+                <li>US 63/872,751</li>
+                <li>US 63/849,613 <span class="lead-inventor">(lead inventor)</span></li>
+                <li>US 19/273,664 <span class="lead-inventor">(lead inventor)</span></li>
+                <li>WO PCT/US2025/037170 <span class="lead-inventor">(lead inventor)</span></li>
+                <li>US 19/086,578 <span class="lead-inventor">(lead inventor)</span></li>
+                <li>US 18/983,103 <span class="lead-inventor">(lead inventor)</span></li>
+                <li>US 63/688,654 <span class="lead-inventor">(lead inventor)</span></li>
             </ul>
         </div>
     </section>
+
+    <!-- Invited Talks, Judgeships, Reviewing Section -->
+    <section>
+    <div class="container">
+        <h2>Invited Talks, Judgeships, and Reviewing</h2>
+        <ul class="talks-list">
+            <li><span class="role">Reviewer:</span> 2026 AAAI Conference</li>
+            <li><span class="role">Judge:</span> 2025 UCSD Graduate Student Research Exposition</li>
+            <li><span class="role">Judge:</span> 2025 San Diego State University Student Research Symposium</li>
+            <li><span class="role">Reviewer:</span> 2025 ICML Efficient Systems for Foundation Models Workshop</li>
+            <li><span class="role">Reviewer:</span> 2025 NeurIPS Efficient Natural Language and Speech Processing Workshop</li>
+            <li><span class="role">Speaker:</span> 2024 UCSD and Qualcomm Graduate Students Tech Talk and Recruitment Event</li>
+            <li><span class="role">Speaker:</span> 2024 UCSD, IEEE, Qualcomm Careers Panel</li>
+            <li><span class="role">Speaker:</span> 2024 UCLA Mathematics Department Alumni Panel</li>
+        </ul>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sudhanshu Agrawal. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
