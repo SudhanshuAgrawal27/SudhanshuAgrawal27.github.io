@@ -140,12 +140,25 @@
             justify-content: center;
             overflow: hidden;
         }
+        .publication-wrapper .item-icon,
+        .blog-wrapper .item-icon {
+            flex: 0 0 240px;
+            width: 240px;
+            height: 180px;
+        }
 
         .item-icon img {
             width: 100%;
             height: 100%;
             object-fit: contain;
             padding: 8px;
+        }
+
+        .item-icons-container {
+            flex: 0 0 140px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
         /* Experience Section */
@@ -160,6 +173,13 @@
             font-size: 1.15rem;
             color: #666;
             margin-bottom: 5px;
+        }
+
+        .experience-item .description {
+            font-size: 1.15rem;
+            color: #888;
+            margin-bottom: 5px;
+            font-style: italic;
         }
 
         .experience-item .date {
@@ -220,6 +240,13 @@
             text-decoration: underline;
         }
 
+        .publication-item .description {
+            font-size: 1.15rem;
+            color: #888;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
         .publication-item .authors {
             font-size: 1.15rem;
             color: #666;
@@ -232,6 +259,64 @@
         }
 
         .publication-item .year {
+            font-size: 1.15rem;
+            color: #999;
+        }
+
+        /* Blogs Section */
+        .blog-item {
+            padding-bottom: 35px;
+        }
+        
+        .blog-wrapper {
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 40px;
+        }
+
+        .blog-wrapper:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .blog-wrapper .item-wrapper {
+            margin-bottom: 0;
+            padding-bottom: 35px;
+        }
+
+        .blog-item .blog-site {
+            font-size: 1.15rem;
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .blog-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .blog-item h3 a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+
+        .blog-item h3 a:hover {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .blog-item .description {
+            font-size: 1.15rem;
+            color: #888;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .blog-item .year {
             font-size: 1.15rem;
             color: #999;
         }
@@ -346,7 +431,8 @@
                 gap: 20px;
             }
 
-            .item-icon {
+            .item-icon,
+            .item-icons-container {
                 order: 2;
                 align-self: center;
             }
@@ -373,7 +459,7 @@
                 <div class="hero-content">
                     <h1>Sudhanshu Agrawal</h1>
                     <div class="title">ML Research Engineer at Qualcomm AI Research</div>
-                    <p> Hi everyone! My name is Sudhanshu and I'm an ML Research Engineer at Qualcomm AI. I work on LLM efficiency research supervised by Mingu Lee. We work on inventing new speculative decoding algorithms for edge applications - making LLMs fast enough to run locally on your phone or laptop! I graduated from UCLA with a double major in Computer Science and Mathematics. I was fortunate to conduct research with Professor Aditya Grover on generative modeling and with Professor Levon Nurbekyan and Professor Samy Wu Fung on mean-field games. I'm always excited to talk about LLM efficiency, speculative decoding, generative modeling, and foundation models. Feel free to reach out if you'd like to chat!</p>
+                    <p> Hi everyone! My name is Sudhanshu and I'm an ML Research Engineer at Qualcomm AI. I work on LLM efficiency research supervised by Mingu Lee. We work on inventing new speculative decoding algorithms for edge applications - making LLMs fast enough to run locally on your phone or laptop! I graduated from UCLA with a double major in Computer Science and Mathematics. I was fortunate to conduct research with Professor Aditya Grover on generative modeling and with Professor Levon Nurbekyan and Professor Samy Wu Fung on mean-field games. In my free time, I like to surf, play the guitar, and sing. I love watching movies and enjoy practically every genre of music. Feel free to reach out if you'd like to chat!</p>
                 </div>
                 <div class="hero-aside">
                     <img src="assets/profile.jpeg" alt="Sudhanshu Agrawal">
@@ -409,6 +495,7 @@
                 <div class="item-content experience-item">
                     <h3>ML Research Engineer</h3>
                     <div class="company">Qualcomm AI Research</div>
+                    <div class="description"> LLM efficiency, speculative decoding, efficient architectures, diffusion LLMs. </div>
                     <div class="date">2023 - Present</div>
                 </div>
                 <div class="item-icon">
@@ -419,6 +506,7 @@
                 <div class="item-content experience-item">
                     <h3>ML Engineering Intern</h3>
                     <div class="company">Qualcomm AI Research</div>
+                    <div class="description">Profiling tools for deep learning applications. </div>
                     <div class="date">Summer 2022</div>
                 </div>
                 <div class="item-icon">
@@ -429,6 +517,7 @@
                 <div class="item-content experience-item">
                     <h3>ML Engineering Intern</h3>
                     <div class="company">SonicJobs</div>
+                    <div class="description">Synthetic computer vision dataset creation. </div>
                     <div class="date">Summer 2021</div>
                 </div>
                 <div class="item-icon">
@@ -439,6 +528,7 @@
                 <div class="item-content experience-item">
                     <h3>ML and Data Science Intern</h3>
                     <div class="company">Reliance Jio</div>
+                    <div class="description">Hydrocarbon property prediction using classical ML.</div>
                     <div class="date">Summer 2020</div>
                 </div>
                 <div class="item-icon">
@@ -447,8 +537,9 @@
             </div>
             <div class="item-wrapper">
                 <div class="item-content experience-item">
-                    <h3>Intern</h3>
+                    <h3>ML Intern</h3>
                     <div class="company">Julia Computing Inc</div>
+                    <div class="description">Contributions to the Flux Model Zoo library.</div>
                     <div class="date">Summer 2019</div>
                 </div>
                 <div class="item-icon">
@@ -487,7 +578,7 @@
             <div class="item-wrapper">
                 <div class="item-content experience-item">
                     <h3>ISC 12th Grade</h3>
-                    <div class="company">Mallya Aditi International School</div>
+                    <div class="company">Mallya Aditi International School, Bengaluru</div>
                     <div class="date">2017 - 2019</div>
                     <div class="honor">National Rank 4</div>
                 </div>
@@ -507,11 +598,12 @@
                     <div class="item-content publication-item">
                         <div class="conference">arXiv Preprint</div>
                         <h3><a href="https://arxiv.org/abs/2509.18085">Spiffy: Multiplying Diffusion LLM Acceleration via Lossless Speculative Decoding</a></h3>
+                        <div class="description">Novel speculative decoding algorithm to accelerate diffusion LLMs.</div>
                         <div class="authors"><span class="author-name">Sudhanshu Agrawal</span>, Risheek Garrepalli, Raghavv Goel, Mingu Lee, Christopher Lott, Fatih Porikli</div>
                         <div class="year">2025</div>
                     </div>
                     <div class="item-icon">
-                        <img src="assets/arxiv.jpg" alt="ArXiv">
+                        <img src="assets/spiffy.png" alt="Spiffy Publication">
                     </div>
                 </div>
             </div>
@@ -519,12 +611,13 @@
                 <div class="item-wrapper">
                     <div class="item-content publication-item">
                         <div class="conference">ICML ES-FoMo Workshop, 2025</div>
-                        <h3><a href="https://arxiv.org/abs/2506.22694">VOCABTRIM: Vocabulary Pruning for Efficient Speculative Decoding in LLMs</a></h3>
+                        <h3><a href="https://arxiv.org/abs/2506.22694">VOCABTRIM: Vocabulary Pruning for Efficient Speculative Decoding in LLMs.</a></h3>
+                        <div class="description">Reducing the vocabulary size of the draft model to reduce memory-bandwidth overhead during speculative decoding.</div>
                         <div class="authors">Raghavv Goel, <span class="author-name">Sudhanshu Agrawal</span>, et al. </div>
                         <div class="year">2025</div>
                     </div>
                     <div class="item-icon">
-                        <img src="assets/icml.png" alt="ICML">
+                        <img src="assets/vocabtrim.png" alt="VOCABTRIM Publication">
                     </div>
                 </div>
             </div>
@@ -533,11 +626,12 @@
                     <div class="item-content publication-item">
                         <div class="conference">NeurIPS ENLSP-IV Workshop, 2024</div>
                         <h3><a href="https://arxiv.org/abs/2410.18351">AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability</a></h3>
+                        <div class="description">Early-draft-stopping using entropy for efficient speculative decoding.</div>
                         <div class="authors"><span class="author-name">Sudhanshu Agrawal</span>, Wonseok Jeon, Mingu Lee </div>
                         <div class="year">2024</div>
                     </div>
                     <div class="item-icon">
-                        <img src="assets/neurips.png" alt="NeurIPS">
+                        <img src="assets/adaedl.png" alt="AdaEDL Publication">
                     </div>
                 </div>
             </div>
@@ -546,11 +640,12 @@
                     <div class="item-content publication-item">
                         <div class="conference">NeurIPS, 2023</div>
                         <h3><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/8fab4407e1fe9006b39180525c0d323c-Abstract-Conference.html">ExPT: Synthetic Pretraining for Few-Shot Experimental Design</a></h3>
+                        <div class="description">Foundation model architecture for in-context adaptation to experimental design objectives.</div>
                         <div class="authors"> Tung Nguyen, <span class="author-name">Sudhanshu Agrawal</span>, Aditya Grover</div>
                         <div class="year">2023</div>
                     </div>
                     <div class="item-icon">
-                        <img src="assets/neurips.png" alt="NeurIPS">
+                        <img src="assets/expt.png" alt="ExPT Publication">
                     </div>
                 </div>
             </div>
@@ -559,11 +654,12 @@
                     <div class="item-content publication-item">
                         <div class="conference">Journal of Computational Physics, 2022</div>
                         <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S002199912200198X">Random Features for High-Dimensional Nonlocal Mean-Field Games</a></h3>
+                        <div class="description">Using random-feature kernels to model mean-field interactions efficiently high-dimensional settings.</div>
                         <div class="authors"> <span class="author-name">Sudhanshu Agrawal*</span>, Wonjun Lee*, Samy Wu Fung, Levon Nurbekyan</div>
                         <div class="year">2022</div>
                     </div>
                     <div class="item-icon">
-                        <img src="assets/elsevier.png" alt="JCP">
+                        <img src="assets/randomfeatures.png" alt="Mean-Field Games Publication">
                     </div>
                 </div>
             </div>
@@ -574,7 +670,7 @@
     <section>
         <div class="container">
             <h2>Patents</h2>
-            <p class="patents-intro">The following patents were filed from 2024-2025 and are hence, not yet published. They relate to 6 distinct inventions with multiple US and global patent applications.</p>
+            <p class="patents-intro">The following patent applications were filed from 2024-2025 and are hence, not yet published. They relate to 6 distinct inventions with multiple US and global patent applications.</p>
             <ul class="patents-list">
                 <li>WO PCT/CN2025/124672</li>
                 <li>US 63/872,751</li>
@@ -603,6 +699,52 @@
             <li><span class="role">Speaker:</span> 2024 UCLA Mathematics Department Alumni Panel</li>
         </ul>
     </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section>
+        <div class="container">
+            <h2>Blog</h2>
+            <div class="blog-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content blog-item">
+                        <div class="blog-site">Medium</div>
+                        <h3><a href="https://medium.com/@sudhanshuagrawal2001/generative-ai-for-experimental-design-c25ee0c71e3f">Generative AI for Experimental Design</a></h3>
+                        <div class="description">Using generative modeling to solve offline black-box optimization problems.</div>
+                        <div class="year">2024</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/expt-cover.png" alt="ExPT Blog">
+                    </div>
+                </div>
+            </div>
+            <div class="blog-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content blog-item">
+                        <div class="blog-site">Medium</div>
+                        <h3><a href="https://medium.com/@sudhanshuagrawal2001/100-dimensional-games-de3eb78b1e05">100-Dimensional Games</a></h3>
+                        <div class="description">Understanding and solving nonlocal mean-field games</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/meanfield.gif" alt="Mean-Field Games Blog">
+                    </div>
+                </div>
+            </div>
+            <div class="blog-wrapper">
+                <div class="item-wrapper">
+                    <div class="item-content blog-item">
+                        <div class="blog-site">FluxML.ai</div>
+                        <h3><a href="https://fluxml.ai/blogposts/2019-09-11-simulating-the-motion-of-charges/">Simulating The Motion of Charged Bodies</a></h3>
+                        <div class="description">Simulating an N-body problem using gradient descent.</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="item-icon">
+                        <img src="assets/flux.gif" alt="Mean-Field Games Blog">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
