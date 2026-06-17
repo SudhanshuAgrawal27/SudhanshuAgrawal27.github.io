@@ -164,7 +164,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            margin-top: 4.3rem;
+            align-self: center;
         }
 
         .hero-aside img {
@@ -461,21 +461,18 @@
         }
 
         .patents-list {
-            list-style: none;
+            list-style: decimal;
+            padding-left: 24px;
         }
 
         .patents-list li {
             font-size: 1.15rem;
             color: #555;
             margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
         }
 
-        .patents-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
+        .patents-list::marker,
+        .patents-list li::marker {
             color: #0066cc;
             font-weight: bold;
         }
@@ -667,7 +664,7 @@
                     <div class="hero-wrapper">
                         <div class="hero-header">
                             <h1>Sudhanshu Agrawal</h1>
-                            <div class="title">Research Engineer @ Qualcomm AI Research</div>
+                            <div class="title">M.S. Computer Science @ Stanford</div>
                         </div>
                         <div class="hero-aside">
                             <img src="assets/profile.jpeg" alt="Sudhanshu Agrawal">
@@ -692,7 +689,10 @@
                             </div>
                         </div>
                         <div class="hero-bio">
-                            Hi everyone! My name is Sudhanshu and I'm an ML Research Engineer at Qualcomm AI. I work on LLM efficiency research supervised by Mingu Lee. We work on inventing new speculative decoding algorithms for edge applications — making LLMs fast enough to run locally on your phone or laptop! I was previously at UCLA and graduated with a double major in Computer Science and Mathematics in 2023. While I was at UCLA, I was fortunate to conduct research with Professor Aditya Grover on generative modeling and with Professor Levon Nurbekyan and Professor Samy Wu Fung on mean-field games. In my free time, I like to surf, play the guitar, and sing. I also love watching movies, reading, and listening to music. Feel free to reach out if you'd like to chat!
+                            <p>Hi everyone! My name is Sudhanshu and I'm an incoming Master's in Computer Science student at Stanford. My current research interests are in studying the internal representations of large generative models, multimodality, and human-computer interaction.</p>
+                            <p>Previously, I was an ML Research Engineer at Qualcomm AI, working on LLM efficiency research supervised by Mingu Lee. At Qualcomm, we worked on inventing new speculative decoding algorithms for edge applications — making LLMs fast enough to run locally on your phone or laptop!</p>
+                            <p>I graduated from UCLA in 2023 with a double major in Computer Science and Mathematics. While I was at UCLA, I was fortunate to conduct research with Professor Aditya Grover on generative modeling and with Professor Levon Nurbekyan and Professor Samy Wu Fung on mean-field games.</p>
+                            <p>In my free time, I like to surf, play the guitar, and sing. I also love watching movies, reading, and listening to music. Feel free to reach out if you'd like to chat!</p>
                         </div>
                     </div>
                 </div>
@@ -821,10 +821,24 @@
                     <div class="publication-wrapper">
                         <div class="item-wrapper">
                             <div class="item-content publication-item">
-                                <div class="conference">arXiv Preprint</div>
-                                <h3><a href="https://arxiv.org/abs/2509.18085">Spiffy: Multiplying Diffusion LLM Acceleration via Lossless Speculative Decoding</a></h3>
+                                <div class="conference">ICLR Sci4DL Workshop 2026</div>
+                                <h3><a href="https://arxiv.org/abs/2603.07475">A Comparative analysis of Layer-wise Representational Capacity in AR and Diffusion LLMs</a></h3>
+                                <div class="description">Comparing layer-wise representations in autoregressive vs. diffusion LLMs. </div>
+                                <div class="authors">Raghavv Goel, Risheek Garrepalli, <span class="author-name">Sudhanshu Agrawal</span>, Chris Lott, Mingu Lee, Fatih Porikli</div>
+                                <div class="year">2026</div>
+                            </div>
+                            <div class="item-icon">
+                                <img src="assets/skip-to-the-good-part-image.png" alt="Layer-wise Representational Capacity Publication">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-wrapper">
+                        <div class="item-wrapper">
+                            <div class="item-content publication-item">
+                                <div class="conference">ICML FoGen and SPIGM Workshops 2026</div>
+                                <h3><a href="https://arxiv.org/abs/2509.18085">Structuring The Future: Diffusion LLM Speculative Decoding via Calibrated Draft Graphs</a></h3>
                                 <div class="description">Novel speculative decoding algorithm to accelerate diffusion LLMs.</div>
-                                <div class="authors"><span class="author-name">Sudhanshu Agrawal</span>, Risheek Garrepalli, Raghavv Goel, Mingu Lee, Christopher Lott, Fatih Porikli</div>
+                                <div class="authors"><span class="author-name">Sudhanshu Agrawal</span>, Risheek Garrepalli, Raghavv Goel, Christopher Lott, Fatih Porikli, Mingu Lee</div>
                                 <div class="year">2025</div>
                             </div>
                             <div class="item-icon">
@@ -897,8 +911,21 @@
             <section>
                 <div class="container">
                     <h2>Patents</h2>
-                    <p class="patents-intro">The following patent applications were filed from 2024-2026 and hence, not all of them are published yet. They relate to 8 distinct inventions with multiple US and global pending patent applications.</p>
-                    <ul class="patents-list">
+                    <p class="patents-intro">The following patent applications relate to 11 distinct inventions. Each invention has multiple US and global pending patent applications.</p>
+                    <ol class="patents-list">
+                        <li>TW 115121889<span class="lead-inventor">(lead inventor)</span></li>
+                        <li>WO PCT/US2026/030830<span class="lead-inventor">(lead inventor)</span></li>
+                        <li>WO PCT/US2026/030887<span class="lead-inventor">(lead inventor)</span></li>
+                        <li>US 64/074,098<span class="lead-inventor">(lead inventor)</span></li>
+                        <li>US 64/072,715<span class="lead-inventor">(lead inventor)</span></li>
+                        <li>US 19/662,922</li>
+                        <li>US 19/634,806</li>
+                        <li>US 19/571,826<span class="lead-inventor">(lead inventor)</span></li>
+                        <li>US 19/554,427<span class="lead-inventor">(lead inventor)</span></li>
+                        <li>TW 115104375</li>
+                        <li>WO PCT/US2026/013469</li>
+                        <li>US 63/964,912 </li>
+
                         <li>US 63/944,624 <span class="lead-inventor">(lead inventor)</span></li>
                         <li>US 63/938,500 <span class="lead-inventor">(lead inventor)</span></li>
                         <li>WO PCT/CN2025/134909 </li>
@@ -910,7 +937,7 @@
                         <li>US 19/086,578 <span class="lead-inventor">(lead inventor)</span></li>
                         <li><a href="https://patents.google.com/patent/US20260065143A1/en?oq=US+18%2f983%2c103" target="_blank" style="color: inherit; text-decoration: underline;">US 18/983,103</a> <span class="lead-inventor">(lead inventor)</span></li>
                         <li>US 63/688,654 <span class="lead-inventor">(lead inventor)</span></li>
-                    </ul>
+                    </ol>
                 </div>
             </section>
         </div>
@@ -969,6 +996,8 @@
                 <div class="container">
                     <h2>Invited Talks | Judgeships | Reviewing</h2>
                     <ul class="talks-list">
+                        <li><span class="role">Reviewer:</span> 2026 ICML Workshop on the Foundations of Generative Models</li>
+                        <li><span class="role">Reviewer:</span> 2026 Transactions on Pattern Analysis and Machine Intelligence</li>
                         <li><span class="role">Reviewer:</span> 2026 AAAI Conference</li>
                         <li><span class="role">Judge:</span> 2025 UCSD Graduate Student Research Exposition</li>
                         <li><span class="role">Judge:</span> 2025 San Diego State University Student Research Symposium</li>
